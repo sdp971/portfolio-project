@@ -1,0 +1,25 @@
+:root{
+    --main-color:#ffffff;
+    --secondary-color:#fed943;
+    --dark-color:#000000;
+    --btn-color : #2f80ed;
+
+    --main-font:Rubik;
+    --title-font-size:40px;
+    --subtitle-font-size:30px;
+    --text-font-size:13px;
+    --navlink-font-size:18px;
+    --title-card-font-size:20px;
+    --subtitle-card-font-size:18px;
+
+    --text-shadow:0px 4px 4px rgba(0,0,0,0.42);
+    --skills-shadow : 0px 4px 36px rgba(0, 0, 0, 0.36);
+    --cards-shadow :0px 4px 24px rgba(0, 0, 0, 0.16);
+    --btn-shadow:0px 4px 16px rgba(0, 0, 0, 0.46);
+
+    --radius : 8px;
+    --spacing :8px;
+    --spacing-2:calc(var(--spacing)*2);
+    --spacing-4:calc(var(--spacing)*4);
+
+}
