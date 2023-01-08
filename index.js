@@ -1,10 +1,12 @@
-const menuHambuger = document.querySelector(".hamburger-menu");
+const menuHamburger = document.querySelector(".hamburger-menu");
 const navList = document.querySelector(".nav-list");
 const mainTitle = document.querySelector(".main-title");
+const socialIcons = document.querySelector(".social-icons-container");
 
-menuHambuger.addEventListener('click', function () {
+menuHamburger.addEventListener('click', function () {
     navList.classList.toggle('mobile-menu');
-    mainTitle.classList.toggle('z-index');
+  mainTitle.classList.toggle('z-index');
+  socialIcons.classList.toggle('z-index');
 });
 
 
