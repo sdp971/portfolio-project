@@ -207,6 +207,7 @@ section{
             right: 9.38%;
             top: 32%;
             bottom: 50%;
+            position: fixed;
 }
 
 
@@ -259,6 +260,16 @@ section{
   background-image: none;
   background-color: var(--secondary-color);
    }
+
+   .social-icons-container{
+    flex-direction: row;
+    position: inherit;
+    margin: var(--spacing-4);
+   }
+
+img{
+    width: 35px;
+}
   
 }
 
@@ -282,5 +293,7 @@ button {
         max-height: max-content;
     }
 
-   
+   img{
+    width: 25px;
+   }
 }
