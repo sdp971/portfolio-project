@@ -89,6 +89,7 @@ a:hover{
 .hamburger-menu{
     width: 35px;
     display: none;
+    z-index: 2;
 }
 section{
     height: 900px;
@@ -162,6 +163,35 @@ section{
      border-radius: var(--radius);
  }
 
+ .typewrite{
+    position: relative;
+ }
+
+ .typewrite::after{
+    content: '';
+    width: 1px;
+    border-right:2px solid black;
+    height: 100%;
+    margin-left: var(--spacing);
+    animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+
+ .z-index{
+    z-index: -2;
+ }
+
+.txt{
+    color: var(--dark-color);
+}
 
  /*Règles responsive*/
 
