@@ -127,6 +127,7 @@ section{
     font-style: normal;
     margin-top: calc(var(--spacing-2) + 2px);
     font-size: clamp(1.5rem, 1.3824rem + 0.9412vw, 2.5rem);
+    padding: var(--spacing);
  }
 
  .hero-section>button:nth-child(3) {
