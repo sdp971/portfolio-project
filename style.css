@@ -19,15 +19,21 @@
     --cards-shadow :0px 4px 24px rgba(0, 0, 0, 0.16);
     --btn-shadow:0px 4px 16px rgba(0, 0, 0, 0.46);
     --menu-shadow:0px 2px 2px rgba(35, 31, 32, 0.36);
+    --socialI-shadow: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.60));
 
     --radius : 8px;
     --spacing :8px;
     --spacing-2:calc(var(--spacing)*2);
+    --spacing-3:calc(var(--spacing)*3);
     --spacing-4:calc(var(--spacing)*4);
 
 }
 
-
+body{
+    margin-top: 70px;
+    height: 100vh;
+    width: 100%;
+}
 *{
     margin: 0;
     padding: 0;
@@ -54,6 +60,7 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
+    background-color: var(--main-color);
     
 }
 
@@ -67,14 +74,14 @@ header{
     margin-right: calc(var(--spacing) + 2px);
 }
 
-a{
+.nav-link{
     text-decoration:none;
     color: var(--dark-color);
     padding: calc(var(--spacing) + 2px);
 
 }
 
-a:hover{
+.nav-link:hover{
     color:var(--secondary-color);
     background-color: var(--dark-color);
     box-shadow: var(--btn-shadow);
@@ -83,9 +90,136 @@ a:hover{
 .hamburger-menu{
     width: 35px;
     display: none;
+    z-index: 2;
+}
+section{
+    height: 900px;
+}
+
+ .hero-section {
+     background-image: url(./images/website-hero-section.png);
+     height: 900px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align:center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     /* background-attachment: fixed; */
+     background-color: var(--secondary-color);
+     width: 100%;
+
+ }
+
+ .subtitle{
+    letter-spacing: 1px;
+    font-size: clamp(0.875rem, 0.7574rem + 0.9412vw, 1.875rem);
+     
+    
+    font-family: var(--main-font);
+    text-transform: uppercase;
+ }
+
+ .main-title{
+    font-weight: 700;
+  
+    font-style: normal;
+    margin-top: calc(var(--spacing-2) + 2px);
+    font-size: clamp(1.5rem, 1.3824rem + 0.9412vw, 2.5rem);
+    padding: var(--spacing);
+ }
+
+ .hero-section>button:nth-child(3) {
+     
+     margin-top: calc(var(--spacing-2) + 2px);
+
+ }
+
+ .button-container{
+    display: flex;
+    justify-content: space-between;
+ }
+ button{
+    max-width: 179px;
+    height: 53px;
+    border-radius: var(--radius);
+    background-color: var(--btn-color);
+    color: var(--main-color);
+    margin: calc(var(--spacing-2) + 2px) calc(var(--spacing-3) + 1px) 0px calc(var(--spacing-3) + 1px);
+    padding: var(--spacing-2);
+    box-shadow: var(--btn-shadow);
+    border: 2px solid var(--btn-color);
+ }
+
+ button:hover{
+   background-color: #666762;
+    border:2px solid #66676d;
+    border-radius: var(--radius);
+ }
+
+ button:active{
+    background-color: #666762;
+    border: 2px solid #66676d;
+     border-radius: var(--radius);
+ }
+
+ .typewrite{
+    position: relative;
+ }
+
+ /*Cursor*/
+ .typewrite::after{
+    content: '';
+    width: 1px;
+    border-right:2px solid black;
+    height: 100%;
+    margin-left: var(--spacing);
+    animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+ /*End cursor rules*/
+
+ .z-index{
+    z-index: -2;
+ }
+
+.txt{
+    color: var(--dark-color);
+}
+
+.social-icons-container{
+    display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 60px;
+        gap: var(--spacing-2);
+        left: 88.2%;
+            right: 9.38%;
+            top: 32%;
+            bottom: 50%;
+            position: fixed;
 }
 
 
+
+.social-icons:hover{
+
+
+    filter:var(--socialI-shadow);
+
+}
+
+ /*Règles responsive*/
 
 @media screen and (max-width:800px) {
     .hamburger-menu{
@@ -121,12 +255,35 @@ a:hover{
    nav{
     width: 100%;
    }
-    
+   
+   .hero-section{
+  background-image: none;
+  background-color: var(--secondary-color);
+   }
+
+   .social-icons-container{
+    flex-direction: row;
+    position: inherit;
+    margin: var(--spacing-4);
+   }
+
+img{
+    width: 35px;
 }
+  
+}
+
+@media screen and (max-width:360px){
+button {
+        padding: var(--spacing);
+    }
+}
+
 
 @media  screen and (max-width:260px) {
     .logo-container{
         display: none;
+        
     }
     header{
         flex-wrap: wrap;
@@ -135,4 +292,8 @@ a:hover{
         max-height: -moz-max-content;
         max-height: max-content;
     }
+
+   img{
+    width: 25px;
+   }
 }
