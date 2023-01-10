@@ -1,25 +1,26 @@
-const menuHamburger = document.querySelector(".hamburger-menu");
-const navList = document.querySelector(".nav-list");
-const mainTitle = document.querySelector(".main-title");
-const socialIcons = document.querySelector(".social-icons-container");
+//Hamburger menu
+const menuHamburger = document.querySelector('.hamburger-menu');
+const navList = document.querySelector('.nav-list');
+const mainTitle = document.querySelector('.main-title');
+const socialIcons = document.querySelector('.social-icons-container');
 
 menuHamburger.addEventListener('click', function () {
-    navList.classList.toggle('mobile-menu');
+  navList.classList.toggle('mobile-menu');
   mainTitle.classList.toggle('z-index');
   socialIcons.classList.toggle('z-index');
 });
 
-
+//Typing effect
 
 const TypeWriter = function (txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt ='';
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
-}
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = '';
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+};
 
 //Type Method
 TypeWriter.prototype.type = function () {
@@ -39,7 +40,7 @@ TypeWriter.prototype.type = function () {
   //Insert txt into element
 
   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-  
+
   //Initial Type Speed
   let typeSpeed = 300;
 
@@ -57,14 +58,13 @@ TypeWriter.prototype.type = function () {
   } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
     //Move to the next word
-    this.wordIndex++
+    this.wordIndex++;
     //Pause before start typing
     typeSpeed = 500;
   }
 
-    setTimeout(()=> this.type(), 200)
-}
-
+  setTimeout(() => this.type(), 200);
+};
 
 //Init On Dom Load
 document.addEventListener('DOMContentLoaded', init);
@@ -78,9 +78,21 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
+//Download file
 
+const downloadBtn = document.querySelector('.download-btn');
+const url = './todownload/Séverine_DORIMOND PEREIRA_CV.pdf';
 
+downloadBtn.addEventListener('click', function () {
 
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = url.split('/').pop();
+  downloadBtn.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+});
 
 
 
