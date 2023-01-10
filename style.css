@@ -288,6 +288,14 @@ h3{
     border-radius: var(--radius);
 }
 
+
+/*Skills-section*/
+
+.skills-section{
+    height: 800px;
+    background-color: var(--secondary-color);
+}
+
  /*Règles responsive*/
 
  @media screen and (max-width:840px){
