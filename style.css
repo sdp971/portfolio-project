@@ -92,9 +92,6 @@ header{
     display: none;
     z-index: 2;
 }
-section{
-    height: 900px;
-}
 
  .hero-section {
      background-image: url(./images/website-hero-section.png);
@@ -238,9 +235,7 @@ h2{
         gap: 60px;
 }
 
-.about-me-section{
-    height: 800px;
-}
+
 
 .about-me-content{
     display: flex;
@@ -286,14 +281,37 @@ h3{
 
 .sdp-picture{
     border-radius: var(--radius);
+    margin-bottom: calc(var(--spacing)*12);
 }
 
 
 /*Skills-section*/
 
 .skills-section{
-    height: 800px;
+   
     background-color: var(--secondary-color);
+    padding-bottom: calc(var(--spacing-2)*10);
+   
+}
+
+.box{
+    background-color: var(--main-color);
+    width: 214px;
+    height: 201px;
+    padding: var(--spacing-2);
+    border-radius: var(--radius);
+    box-shadow: var(--skills-shadow);
+}
+
+.wrapper{
+  
+   margin: 0 auto;
+display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-4) + 5px);
+    max-width: 60%;
+   
 }
 
  /*Règles responsive*/
