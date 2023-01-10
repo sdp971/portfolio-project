@@ -187,9 +187,7 @@ header{
  }
  /*End cursor rules*/
 
- .z-index{
-    z-index: -2;
- }
+
 
 .txt{
     color: var(--dark-color);
