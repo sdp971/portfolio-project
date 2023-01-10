@@ -238,6 +238,10 @@ h2{
         gap: 60px;
 }
 
+.about-me-section{
+    height: 800px;
+}
+
 .about-me-content{
     display: flex;
   
