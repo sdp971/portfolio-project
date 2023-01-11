@@ -61,6 +61,7 @@ header{
     width: 100%;
     top: 0;
     background-color: var(--main-color);
+    z-index: +1;
     
 }
 
@@ -91,9 +92,6 @@ header{
     width: 35px;
     display: none;
     z-index: 2;
-}
-section{
-    height: 900px;
 }
 
  .hero-section {
@@ -189,9 +187,7 @@ section{
  }
  /*End cursor rules*/
 
- .z-index{
-    z-index: -2;
- }
+
 
 .txt{
     color: var(--dark-color);
@@ -238,9 +234,7 @@ h2{
         gap: 60px;
 }
 
-.about-me-section{
-    height: 800px;
-}
+
 
 .about-me-content{
     display: flex;
@@ -286,8 +280,77 @@ h3{
 
 .sdp-picture{
     border-radius: var(--radius);
+    margin-bottom: calc(var(--spacing)*12);
 }
 
+
+/*Skills-section*/
+
+.skills-section{
+   
+    background-color: var(--secondary-color);
+    padding-bottom: calc(var(--spacing-2)*10);
+   
+}
+
+.box{
+    background-color: var(--main-color);
+    width: 214px;
+    height: 201px;
+    padding: var(--spacing-2);
+    border-radius: var(--radius);
+    box-shadow: var(--skills-shadow);
+}
+
+.wrapper{
+  
+   margin: 0 auto;
+display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-4) + 5px);
+    max-width: 60%;
+   
+}
+
+
+
+.box {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 3s ease;
+    transform-style: preserve-3d;
+}
+
+.box:hover {/*Flipping effect*/
+    transform: rotateY(1turn);
+}
+
+
+
+div.box:nth-child(1){
+    background-image: url(./images/html-picture.png);
+}
+
+div.box:nth-child(2) {
+    background-image: url(./images/css3-picture.png);
+}
+
+div.box:nth-child(3) {
+    background-image: url(./images/js-picture.png);
+}
+
+div.box:nth-child(4) {
+    background-image: url(./images/node-picture.png);
+}
+
+div.box:nth-child(5) {
+    background-image: url(./images/react-picture.png);
+}
+
+div.box:nth-child(6) {
+    background-image: url(./images/git-picture.png);
+}
  /*Règles responsive*/
 
  @media screen and (max-width:840px){

@@ -1,14 +1,21 @@
 //Hamburger menu
 const menuHamburger = document.querySelector('.hamburger-menu');
 const navList = document.querySelector('.nav-list');
-const mainTitle = document.querySelector('.main-title');
-const socialIcons = document.querySelector('.social-icons-container');
+
+const navLink = document.querySelectorAll('nav-link');
 
 menuHamburger.addEventListener('click', function () {
   navList.classList.toggle('mobile-menu');
-  mainTitle.classList.toggle('z-index');
-  socialIcons.classList.toggle('z-index');
 });
+
+navLink.forEach(
+  navList.addEventListener('click', function () {
+    navList.classList.remove('mobile-menu');
+  })
+);
+  
+
+
 
 //Typing effect
 
@@ -84,15 +91,10 @@ const downloadBtn = document.querySelector('.download-btn');
 const url = './todownload/Séverine_DORIMOND PEREIRA_CV.pdf';
 
 downloadBtn.addEventListener('click', function () {
-
   const a = document.createElement('a');
   a.href = url;
   a.download = url.split('/').pop();
   downloadBtn.appendChild(a);
   a.click();
   document.body.removeChild(a);
-
 });
-
-
-
