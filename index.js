@@ -2,9 +2,20 @@
 const menuHamburger = document.querySelector('.hamburger-menu');
 const navList = document.querySelector('.nav-list');
 
+const navLink = document.querySelectorAll('nav-link');
+
 menuHamburger.addEventListener('click', function () {
   navList.classList.toggle('mobile-menu');
 });
+
+navLink.forEach(
+  navList.addEventListener('click', function () {
+    navList.classList.remove('mobile-menu');
+  })
+);
+  
+
+
 
 //Typing effect
 
