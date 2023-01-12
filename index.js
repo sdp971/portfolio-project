@@ -94,3 +94,20 @@ downloadBtn.addEventListener('click', function () {
   a.click();
   document.body.removeChild(a);
 });
+
+//Popup
+
+const popup = document.getElementById('popup');
+const body = document.querySelector('body');
+
+
+function openPopup() {
+  popup.classList.add('open-popup');
+  body.classList.add('bg');
+  
+}
+
+function closePopup() {
+  popup.classList.remove('open-popup');
+  body.classList.remove('bg')
+}

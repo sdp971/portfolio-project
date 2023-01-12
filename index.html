@@ -154,7 +154,7 @@
 <section class="get-in-touch" id="contact">
     <h2>get in touch with me</h2>
 
-   <form action="">
+   <form action="#">
         <div class="form-text">
              <label for="full-name">Full name :</label>  
              <input type="text" name="full-name" value="" placeholder="Enter Your Name">
@@ -171,11 +171,22 @@
          </div>
 
              <div class="form-submit-btn">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="openPopup()">
          </div>
+
+        
 
 
    </form>
+
+   <div class="popup" id="popup">
+   <img src="./images/success-img.svg" alt="">
+ 
+  <h2 class="popup-title">Thank you !</h2>
+  <p class="popup-text">Your message has been successfully submitted.</p>
+  <button type="button" onclick="closePopup()">Ok</button>
+   </div>
+
 </section>
 
 

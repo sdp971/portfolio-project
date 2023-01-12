@@ -481,6 +481,7 @@ div.box:nth-child(6) {
 .get-in-touch{
     background-color: var(--secondary-color);
     padding-bottom: calc(var(--spacing-2)*10);
+
    
 }
 
@@ -536,6 +537,48 @@ input:focus, textarea:focus {box-shadow: var(--skills-shadow);
    }
 
 
+.popup{
+   max-width: 610px;
+    background: var(--secondary-color);
+    border-radius: var(--radius);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding:var(--spacing-2);
+    color: #333;
+    box-shadow: var(--cards-shadow);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  
+    
+    
+
+}
+
+.popup-title{
+    margin: var(--spacing-2);
+    padding: 0;
+    text-align: center;
+}
+
+.popup>img:nth-child(1) {
+    width: 130px;
+    height: 130px;
+    /*! top: 25px; */
+    vertical-align: middle;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    
+}
+
+.bg{
+    visibility: hidden;
+}
 
 
 
