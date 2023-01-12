@@ -146,7 +146,7 @@ header{
     border-radius: var(--radius);
     background-color: var(--btn-color);
     color: var(--main-color);
-    margin: calc(var(--spacing-2) + 2px) calc(var(--spacing-3) + 1px) 0px calc(var(--spacing-3) + 1px);
+    margin: calc(var(--spacing-2) + 2px) calc(var(--spacing-3) + 1px) 0px 0px;
     padding: var(--spacing-2);
     box-shadow: var(--btn-shadow);
     border: 2px solid var(--btn-color);
@@ -163,6 +163,9 @@ header{
     border: 2px solid #66676d;
      border-radius: var(--radius);
  }
+
+ 
+ 
 
  .typewrite{
     position: relative;
@@ -301,6 +304,7 @@ h3{
     padding: var(--spacing-2);
     border-radius: var(--radius);
     box-shadow: var(--skills-shadow);
+    min-width: 200px;
 }
 
 .wrapper{
@@ -392,7 +396,7 @@ div.box:nth-child(6) {
 }
 
 .img-card {
-    width: 304px;
+    max-width: 304px;
     height: 378px;
     position:relative;
    border-radius:  calc(var(--radius)*2);
@@ -432,7 +436,7 @@ div.box:nth-child(6) {
 }
 
 .img-overlay{
-    width: 304px;
+    max-width: 304px;
     height: 378px;
     background-color:#111111;
     opacity: 0%;

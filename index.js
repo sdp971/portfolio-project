@@ -13,7 +13,6 @@ navLink.forEach(item => {item.addEventListener('click', function () {
   })
 })
 
-
 //Typing effect
 
 const TypeWriter = function (txtElement, words, wait = 3000) {
