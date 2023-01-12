@@ -8,10 +8,11 @@ menuHamburger.addEventListener('click', function () {
 });
 
 //To jump to a specific section of the website and remove the menu
-navLink.forEach(item => {item.addEventListener('click', function () {
-  navList.classList.remove('mobile-menu');
-  })
-})
+navLink.forEach((item) => {
+  item.addEventListener('click', function () {
+    navList.classList.remove('mobile-menu');
+  });
+});
 
 //Typing effect
 
@@ -97,17 +98,20 @@ downloadBtn.addEventListener('click', function () {
 
 //Popup
 
-const popup = document.getElementById('popup');
+const popup = document.querySelector('.popup');
 const body = document.querySelector('body');
 
 
+
 function openPopup() {
+
+  
   popup.classList.add('open-popup');
   body.classList.add('bg');
-  
+
 }
 
 function closePopup() {
   popup.classList.remove('open-popup');
-  body.classList.remove('bg')
+  body.classList.remove('bg');
 }

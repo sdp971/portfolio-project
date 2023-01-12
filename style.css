@@ -573,6 +573,7 @@ input:focus, textarea:focus {box-shadow: var(--skills-shadow);
 .open-popup{
     visibility: visible;
     top: 50%;
+    position: fixed;
     
 }
 
