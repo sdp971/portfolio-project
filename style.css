@@ -140,7 +140,8 @@ header{
     display: flex;
     justify-content: space-between;
  }
- button{
+ button, 
+ input[type="submit"]{
     max-width: 179px;
     height: 53px;
     border-radius: var(--radius);
@@ -480,7 +481,65 @@ div.box:nth-child(6) {
 .get-in-touch{
     background-color: var(--secondary-color);
     padding-bottom: calc(var(--spacing-2)*10);
+   
 }
+
+form{
+    width: 85%;
+    max-width: 600px;
+    /* background-color: #666762; */
+    margin: 0 auto;
+
+    
+
+}
+
+label{
+    display:none;
+}
+
+input[type="text"],input[type="email"],
+textarea{
+    width: 100%;
+    height: 60px;
+    margin-top: 33px ;
+    font-size: var(--text-font-size);
+  
+}
+
+input,textarea{
+    border-radius:calc(var(--radius) + 2px);
+    border:2px solid var(--dark-color);
+    box-sizing: border-box;
+    font-weight: 700;
+    padding: var(--spacing-2);
+     
+    
+   
+    
+}
+
+input:hover, textarea:hover{
+   box-shadow: var(--skills-shadow);
+}
+
+::placeholder{
+    font-family: var(--main-font);
+    color: var(--dark-color);
+    
+  
+}
+
+input:focus, textarea:focus {box-shadow: var(--skills-shadow);
+    border:2px solid var(--dark-color);
+    outline: none;
+   }
+
+
+
+
+
+
 
  /*Règles responsive*/
 
