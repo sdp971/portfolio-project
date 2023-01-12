@@ -475,6 +475,13 @@ div.box:nth-child(6) {
   
 }
 
+/*Contact section*/
+
+.get-in-touch{
+    background-color: var(--secondary-color);
+    padding-bottom: calc(var(--spacing-2)*10);
+}
+
  /*Règles responsive*/
 
  @media screen and (max-width:840px){
