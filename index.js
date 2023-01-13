@@ -8,10 +8,11 @@ menuHamburger.addEventListener('click', function () {
 });
 
 //To jump to a specific section of the website and remove the menu
-navLink.forEach(item => {item.addEventListener('click', function () {
-  navList.classList.remove('mobile-menu');
-  })
-})
+navLink.forEach((item) => {
+  item.addEventListener('click', function () {
+    navList.classList.remove('mobile-menu');
+  });
+});
 
 //Typing effect
 
@@ -94,3 +95,28 @@ downloadBtn.addEventListener('click', function () {
   a.click();
   document.body.removeChild(a);
 });
+
+//Popup
+
+const popup = document.querySelector('.popup');
+const body = document.querySelector('body');
+let popupTitle = document.querySelector('.popup-title');
+let textValue = document.getElementById('full-name').value;
+popupTitle.innerHTML = `Thank you ${textValue} !`;
+console.log(popupTitle);
+
+
+
+
+function openPopup() {
+  popup.classList.add('open-popup');
+  body.classList.add('bg');
+
+}
+
+function closePopup() {
+  popup.classList.remove('open-popup');
+  body.classList.remove('bg');
+  window.location.reload();
+}
+
