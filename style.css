@@ -9,7 +9,7 @@
     --main-font:'Rubik', sans-serif;
     --title-font-size:40px;
     --subtitle-font-size:30px;
-    --text-font-size:13px;
+    --text-font-size:15px;
     --navlink-font-size:18px;
     --title-card-font-size:20px;
     --subtitle-card-font-size:18px;
@@ -80,13 +80,16 @@ header{
     text-decoration:none;
     color: var(--dark-color);
     padding: calc(var(--spacing) + 2px);
+    border: 2px solid transparent;
 
 }
 
 .nav-link:hover{
-    color:var(--secondary-color);
-    background-color: var(--dark-color);
+    color:var(--dark-color);
+    background-color: var(--secondary-color);
     box-shadow: var(--btn-shadow);
+    border-radius: var(--radius);
+    border:2px solid var(--dark-color);
 }
 
 .hamburger-menu{
@@ -114,7 +117,8 @@ header{
 
  .subtitle{
     letter-spacing: 1px;
-    font-size: clamp(0.875rem, 0.7574rem + 0.9412vw, 1.875rem);
+    /* font-size: clamp(0.875rem, 0.7574rem + 0.9412vw, 1.875rem); */
+    font-size: clamp(0.875rem, 1.7574rem + 0.9412vw, 1.875rem);
      
     
     font-family: var(--main-font);
@@ -145,15 +149,16 @@ header{
     max-width: 179px;
     height: 53px;
     border-radius: var(--radius);
-    background-color: var(--btn-color);
-    color: var(--main-color);
-    margin: calc(var(--spacing-2) + 2px) calc(var(--spacing-3) + 1px) 0px 0px;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    margin: calc(var(--spacing-2) + 2px) calc(var(--spacing-3) + 1px) var(--spacing-2) var(--spacing-2);
     padding: var(--spacing-2);
     box-shadow: var(--btn-shadow);
-    border: 2px solid var(--btn-color);
+    border: 2px solid var(--dark-color);
  }
 
- button:hover{
+ button:hover,
+ input[type="submit"]:hover{
    background-color: #666762;
     border:2px solid #66676d;
     border-radius: var(--radius);
@@ -225,10 +230,13 @@ header{
 h2{
     text-align: center;
     font-family: var(--main-font);
-        font-size: var(--title-font-size);
+        /* font-size: var(--title-font-size); */
         text-transform: uppercase;
-        padding: calc(var(--spacing)*10) 0;
+        /* padding: calc(var(--spacing)*10) 0; */
         text-shadow: var(--text-shadow);
+        font-size: clamp(1.5rem, 1.3824rem + 0.9412vw, 2.5rem);
+        padding: calc(var(--spacing)*10);
+        font-size: clamp(2rem, 1.3824rem + 0.9412vw, 2.5rem);
 }
 
 .about-me-container{
@@ -263,9 +271,14 @@ h2{
 .about-me-content>p:nth-child(3) {
     margin-top: 17px;
     /*! margin-bottom: 1px; */
-    font-size: 13px;
+    font-size: var(--text-font-size);
     font-weight: 500;
     letter-spacing: 0.1em;
+    line-height: 20px;
+}
+
+.about-me-section{
+    margin-bottom: calc(var(--spacing-4) + 12px);
 }
 
 h3{
@@ -286,6 +299,7 @@ h3{
 .sdp-picture{
     border-radius: var(--radius);
     margin-bottom: calc(var(--spacing)*12);
+    border: 5px solid var(--dark-color);
 }
 
 
@@ -315,7 +329,7 @@ display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: calc(var(--spacing-4) + 5px);
-    max-width: 60%;
+    max-width: 100%;
    
 }
 
@@ -581,6 +595,11 @@ input:focus, textarea:focus {box-shadow: var(--skills-shadow);
     visibility: hidden;
 }
 
+footer{
+    text-align: center;
+    margin :39px 0px;
+}
+
 
 
 
@@ -668,16 +687,26 @@ img{
 @media  screen and (max-width:600px) {
     .sdp-picture{
         box-shadow: var(--btn-shadow);
+        max-width: 450px;
     }
    
+}
+
+@media  screen and (max-width:451px) {
+.sdp-picture{
+    width: 350px;
+    
+}
 }
 
 @media screen and (max-width:360px){
 button {
         padding: var(--spacing);
     }
+        .sdp-picture {
+            width: 250px;
 }
-
+}
 
 @media  screen and (max-width:260px) {
     .logo-container{
@@ -695,7 +724,8 @@ button {
    img{
     width: 25px;
    }
+.sdp-picture {
+    width: 200px;
 
-
- 
+}
 }

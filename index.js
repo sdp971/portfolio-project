@@ -100,12 +100,15 @@ downloadBtn.addEventListener('click', function () {
 
 const popup = document.querySelector('.popup');
 const body = document.querySelector('body');
+let popupTitle = document.querySelector('.popup-title');
+let textValue = document.getElementById('full-name').value;
+popupTitle.innerHTML = `Thank you ${textValue} !`;
+console.log(popupTitle);
+
 
 
 
 function openPopup() {
-
-  
   popup.classList.add('open-popup');
   body.classList.add('bg');
 
@@ -114,4 +117,6 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove('open-popup');
   body.classList.remove('bg');
+  window.location.reload();
 }
+
