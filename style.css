@@ -162,6 +162,7 @@ header{
    background-color: #666762;
     border:2px solid #66676d;
     border-radius: var(--radius);
+    color:var(--main-color);
  }
 
  button:active{
